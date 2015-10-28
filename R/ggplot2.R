@@ -30,6 +30,7 @@ GeomDl <- ggplot2::ggproto("GeomDl", ggplot2::Geom,
 geom_dl <- structure(function
 ### Geom that will plot direct labels.
 (mapping=NULL,
+ data=NULL,
 ### aes(label=variable_that_will_be_used_as_groups_in_Positioning_Methods).
  method,
 ### Positioning Method.
@@ -43,6 +44,7 @@ geom_dl <- structure(function
 
   layer(
     mapping = mapping,
+    data = data,
     stat = ggplot2::StatIdentity,
     geom = GeomDl,
     position = PositionIdentity,
